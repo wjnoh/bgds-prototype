@@ -47,9 +47,14 @@ main.main {
 
 .header__icon--left {
   position: absolute;
-  font-size: 30px;
   left: 25px;
   color: #212529;
+  display: flex;
+  align-items: center;
+}
+
+.header__icon--left ion-icon {
+  font-size: 30px;
 }
 
 .header__icon--right {
