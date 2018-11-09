@@ -54,7 +54,7 @@ main.main {
 }
 
 .header__icon--left ion-icon {
-  font-size: 30px;
+  font-size: 30px !important;
 }
 
 .header__icon--right {
