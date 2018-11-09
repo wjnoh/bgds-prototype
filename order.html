@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bargain Dish</title>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <meta name="theme-color" content="#ff7979" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="header">
+        <ion-icon
+          name="ios-arrow-back"
+          class="header__icon--left white"
+        ></ion-icon>
+        도깨비김밥
+        <ion-icon name="md-share" class="header__icon--right white"></ion-icon>
+      </section>
+      <section class="order">
+        <div class="order__img-wrapper">
+          <img
+            src="https://i.ytimg.com/vi/kgLI5FRfbb0/maxresdefault.jpg"
+            class="order__img"
+            alt=""
+          /><ion-icon
+            name="basket"
+            class="order__item-button"
+            onclick="loadingClick()"
+          ></ion-icon>
+        </div>
+        <div class="order__wrapper">
+          <h1 class="order__item-name">해물볶음밥</h1>
+          <div class="order__item-price">
+            <span class="order__item-price-percent">40%</span>
+            <span class="order__item-price-current">3000원</span>
+            <span class="order__item-price-past">5000원</span>
+          </div>
+          <div class="order__item-info">
+            <span>이용시간: 20:00 ~ 22:00</span>
+            <span>이용방법: 방문포장</span> <span>전화번호: 042-000-0000</span>
+          </div>
+        </div>
+      </section>
+      <section class="nav">
+        <ul class="nav__items">
+          <a href="./index.html">
+            <li class="nav__item nav__item--selected">
+              <ion-icon name="map"></ion-icon>
+            </li>
+          </a>
+          <a href="./orderList.html">
+            <li class="nav__item"><ion-icon name="clipboard"></ion-icon></li>
+          </a>
+        </ul>
+      </section>
+
+      <div class="loading-dimmer">
+        <img src="./images/loading.svg" alt="" />
+      </div>
+    </main>
+
+    <script>
+      loadingClick = e => {
+        document.querySelector(".loading-dimmer").style.display = "flex";
+        setTimeout(() => {
+          location.href = "./orderList.html";
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>

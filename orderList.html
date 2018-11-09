@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bargain Dish</title>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <meta name="theme-color" content="#ff7979" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="header">
+        <ion-icon
+          name="ios-arrow-back"
+          class="header__icon--left white"
+        ></ion-icon
+        >주문내역
+      </section>
+      <section class="orderList">
+        <ul class="orderList__items">
+          <li class="orderList__item">
+            <span class="rest-name">도깨비김밥 </span>
+            <span class="rest-menu">해물볶음밥 1개 6,000원</span>
+            <span class="rest-time">2018/11/11(일) 20:00 ~ 22:00</span>
+          </li>
+          <li class="orderList__item">
+            <span class="rest-name">도깨비김밥</span>
+            <span class="rest-menu">해물볶음밥 1개 6,000원</span>
+            <span class="rest-time">2018/11/09(금) 14:00 ~ 16:00</span>
+          </li>
+        </ul>
+      </section>
+      <section class="nav">
+        <ul class="nav__items">
+          <a href="./index.html">
+            <li class="nav__item"><ion-icon name="map"></ion-icon></li>
+          </a>
+          <a href="./orderList.html">
+            <li class="nav__item nav__item--selected">
+              <ion-icon name="clipboard"></ion-icon>
+            </li>
+          </a>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
