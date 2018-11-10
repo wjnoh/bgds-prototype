@@ -17,7 +17,14 @@
       <section class="seller-menu">
         <div class="menu__added">
           <h1 class="added-title">등록메뉴</h1>
-          <span class="added-menu">등록된 메뉴가 없습니다.</span>
+          <span class="added-menu">
+            <span class="added-menu__title"
+              >해물볶음밥<a href="./seller-menu.html">&#215;</a></span
+            >
+            <span class="added-menu__etc">가격: 3,000</span>
+            <span class="added-menu__etc">시간: 20:00 ~ 22:00</span>
+            <span class="added-menu__etc">수량: 5</span>
+          </span>
         </div>
         <div class="menu__add">
           <h1 class="add-title">메뉴추가</h1>
@@ -99,11 +106,11 @@
     <script>
       clickTimeDay = () => {
         document.querySelector(".add-menu__day").style.backgroundColor =
-          "#eb4d4b";
+          "black";
       };
       clickTimeNight = () => {
         document.querySelector(".add-menu__night").style.backgroundColor =
-          "#eb4d4b";
+          "black";
       };
       clickUp = () => {
         document.querySelector(".quantity-number").value =
