@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bargain Dish</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=2si52JMswi_caKDaEDvY&submodules=geocoder"
+    ></script>
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -38,8 +42,10 @@
             <span>이용시간: 20:00 ~ 22:00</span>
             <span>이용방법: 방문포장</span> <span>전화번호: 042-000-0000</span>
           </div>
+          <div id="map2"></div>
         </div>
       </section>
+
       <section class="nav">
         <ul class="nav__items">
           <a href="./index.html">
@@ -65,6 +71,45 @@
           location.href = "./orderList.html";
         }, 3000);
       };
+    </script>
+
+    <script>
+      var map = new naver.maps.Map("map2");
+      var myaddress = "대한민국 대전광역시 유성구 온천2동 412-11"; // 도로명 주소나 지번 주소만 가능 (건물명 불가!!!!)
+      naver.maps.Service.geocode({ address: myaddress }, function(
+        status,
+        response
+      ) {
+        if (status !== naver.maps.Service.Status.OK) {
+          return alert(myaddress + "의 검색 결과가 없거나 기타 네트워크 에러");
+        }
+        var result = response.result;
+        // 검색 결과 갯수: result.total
+        // 첫번째 결과 결과 주소: result.items[0].address
+        // 첫번째 검색 결과 좌표: result.items[0].point.y, result.items[0].point.x
+        var myaddr = new naver.maps.Point(
+          result.items[0].point.x,
+          result.items[0].point.y
+        );
+        map.setCenter(myaddr); // 검색된 좌표로 지도 이동
+
+        // 마크 클릭시 인포윈도우 오픈
+        var infowindow = new naver.maps.InfoWindow({
+          content:
+            '<a style="display:block; padding:15px;" href="./order.html"><h4 style="font-size:16px;">도깨비김밥</h4></a>'
+        });
+
+        var marker = new naver.maps.Marker({
+          position: new naver.maps.LatLng(36.3619089, 127.34899640000003),
+          map: map,
+          icon: {
+            url: "./images/marker.png",
+            size: new naver.maps.Size(30, 35),
+            origin: new naver.maps.Point(4, -5),
+            anchor: new naver.maps.Point(11, 35)
+          }
+        });
+      });
     </script>
   </body>
 </html>
