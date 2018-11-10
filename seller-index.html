@@ -5,10 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bargain Dish</title>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <main class="main"></main>
+    <main class="main">
+      <section class="header">도깨비김밥</section>
+
+      <section class="seller">
+        <h1 class="seller__title">들어온 주문</h1>
+        <ul class="seller__orders">
+          <li class="seller__order">
+            <span class="menu-name"
+              >해물볶음밥 1개 3,000원<ion-icon
+                name="ios-checkbox-outline"
+              ></ion-icon
+            ></span>
+            <span class="menu-customer">박경철 010-0000-0000</span>
+            <span class="menu-time">2018/11/11(일) 20:00 ~ 22:00</span>
+          </li>
+          <li class="seller__order">
+            <span class="menu-name"
+              >해물볶음밥 1개 3,000원<ion-icon name="ios-checkbox"></ion-icon
+            ></span>
+            <span class="menu-customer">박상욱 010-0000-0000</span>
+            <span class="menu-time">2018/11/10(토) 20:00 ~ 22:00</span>
+          </li>
+          <li class="seller__order">
+            <span class="menu-name"
+              >오불덮밥 2개 6,000원<ion-icon name="ios-checkbox"></ion-icon
+            ></span>
+            <span class="menu-customer">박주영 010-0000-0000</span>
+            <span class="menu-time">2018/11/08(목) 14:00 ~ 16:00</span>
+          </li>
+          <li class="seller__order">
+            <span class="menu-name"
+              >치즈돈까스 1개 3,500원<ion-icon name="ios-checkbox"></ion-icon
+            ></span>
+            <span class="menu-customer">노우제 010-0000-0000</span>
+            <span class="menu-time">2018/11/07(수) 20:00 ~ 22:00</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="nav">
+        <ul class="nav__items">
+          <a href="./seller-index.html">
+            <li class="nav__item nav__item--selected">
+              <ion-icon name="ios-home"></ion-icon>
+            </li>
+          </a>
+          <a href="./seller-menu.html">
+            <li class="nav__item"><ion-icon name="clipboard"></ion-icon></li>
+          </a>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

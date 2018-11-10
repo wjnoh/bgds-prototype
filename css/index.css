@@ -82,6 +82,7 @@ main.main {
   align-items: center;
   position: fixed;
   bottom: 0;
+  z-index: 101;
 }
 
 .nav__items {
@@ -122,9 +123,7 @@ main.main {
 
 .orderList {
   padding: 10px 20px;
-}
-
-.orderList__items {
+  margin-bottom: 60px;
 }
 
 .orderList__item {
@@ -244,4 +243,51 @@ main.main {
 
 .loading-dimmer--enabled {
   display: block;
+}
+
+.seller {
+  padding: 10px 20px;
+  margin-bottom: 60px;
+}
+
+.seller__title {
+  font-size: 25px;
+  margin: 20px 0;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.seller__order {
+  padding: 20px 0;
+  background-color: white;
+  border-top: 1px solid #495057;
+}
+
+.seller__order:last-child {
+  border-bottom: 1px solid #495057;
+}
+
+.menu-name {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.menu-name ion-icon {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.menu-customer {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.menu-time {
+  display: block;
+  font-size: 15px;
 }
